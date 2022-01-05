@@ -120,20 +120,12 @@ button {
   justify-content: center;
 }
 
-.cntc-icon1 {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  fill: var(--secondary-text-color);
-}
-
 .tel-link {
   padding: 10px 0 10px 0;
 }
 
+.cntc-icon1,
 .cntc-icon2 {
-  width: 10px;
-  height: 16px;
   margin-right: 10px;
   fill: var(--secondary-text-color);
 }
@@ -396,7 +388,8 @@ img {
   align-items: center;
 }
 
-.clients-item:hover {
+.clients-item:hover,
+.clients-item:focus {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
