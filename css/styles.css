@@ -117,6 +117,7 @@ button {
 .mail-link {
   margin-right: 50px;
   padding: 10px 0 10px 0;
+  justify-content: center;
 }
 
 .cntc-icon1 {
@@ -144,14 +145,29 @@ button {
   color: var(--secondary-text-color);
 }
 
-.cntc-list-item > .link:hover,
-.cntc-list-item > .link:focus {
-  color: var(--accent-color);
+.mail-link,
+.tel-link {
+  max-width: 161px;
+  max-height: 16px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-text-color);
+  fill: var(--secondary-text-color);
 }
 
-.cntc-icon1:hover,
-.cntc-icon2:hover {
+.mail-link:hover,
+.tel-link:hover,
+.mail-link:focus,
+.tel-link:focus {
+  color: var(--accent-color);
   fill: var(--accent-color);
+}
+
+.cntc-icon1,
+.cntc-icon2 {
+  fill: inherit;
 }
 
 /* ШАПКА-ГЕРОЙ */
@@ -232,6 +248,7 @@ button {
   font-weight: bold;
   line-height: 1.14;
   color: var(--primary-text-color);
+  margin-top: 30px;
 }
 
 .specifics-list {
@@ -317,27 +334,32 @@ img {
 
 .sl-list {
   display: flex;
-  align-items: center;
   justify-content: center;
   margin-top: 16px;
 }
 
-.sl-btn {
-  padding: 0;
-  border: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  fill: #afb1b8;
-  background-color: var(--primary-color);
+.sl-item + .sl-item {
+  margin-left: 10px;
 }
 
-.sl-btn:hover {
+.sl-link {
+  width: 44px;
+  height: 44px;
+  fill: #afb1b8;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.sl-link:hover,
+.sl-link:focus {
   background-color: var(--accent-color);
   fill: var(--primary-color);
 }
 
-.btn-icon {
+.sl-icon {
   fill: inherit;
 }
 
@@ -366,8 +388,6 @@ img {
 }
 
 .client-icon {
-  width: 106px;
-  height: 60px;
   fill: inherit;
 }
 
@@ -484,7 +504,7 @@ img {
   padding-bottom: 60px;
 }
 
-.address-section {
+.address-links {
   display: inline-flex;
   flex-direction: column;
 }
@@ -518,7 +538,7 @@ img {
   color: var(--primary-color);
 }
 
-.sn-section {
+.sn-links {
   display: inline-flex;
   flex-direction: column;
   margin-left: 70px;
@@ -541,21 +561,23 @@ img {
   justify-content: space-around;
 }
 
-.sn-list-item:not(:last-child) {
-  margin-right: 10px;
+.sn-item + .sn-item {
+  margin-left: 10px;
 }
 
-.sn-btn {
-  padding: 0;
-  border: none;
+.sn-link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   fill: var(--primary-color);
   background-color: #43444d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.sn-btn:hover {
+.sn-link:hover,
+.sn-link:focus {
   background-color: var(--accent-color);
   fill: var(--primary-color);
 }
